@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Все статьи на сайте
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>
+            {{ article.title }}
+        </h1>
+            <div >
+                <h2>
+                    {{ article.intro }}
+                </h2>
+                <p>
+                    {{ article.text }}
+                </p>
+                <p>
+                    <b>Дата: {{ article.date.date() }}</b>
+                </p>
+                <a href="/posts/{{ article.id }}/del" class="btn btn-danger">Удалить</a>
+                <a href="/posts/{{ article.id }}/update" class="btn btn-success">Редактировать</a>
+            </div>
+    </div>
+{% endblock %}

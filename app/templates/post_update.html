@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Страница про нас
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Все статьи на сайте</h1>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="title">Заголовок</label>
+                <input type="text" name="title" id="title" class="form-control" value = "{{ article.title }}"placeholder="Введите заголовок">
+            </div>
+            <div class="form-group">
+                <label for="intro">Введение</label>
+                <textarea name="intro" id="intro" cols="30" rows="4" class="form-control" placeholder="Введите введение">{{ article.intro }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="text">Текст</label>
+                <textarea name="text" id="text" cols="30" rows="10" class="form-control"  placeholder="Введите текст статьи">{{ article.text }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Обновить</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    flask:
+        build: .
+        container_name: flask_learning
+        environment:
+          - DEBUG=True
+        volumes:
+          - ./app:/app
+          - ./instance:/instance
+        ports:
+          - "8080:8080"
+        restart: always
