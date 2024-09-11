@@ -4,6 +4,7 @@ tmp/
 
 .idea
 .git
+instance
 .vscode
 
 .old_helm*
